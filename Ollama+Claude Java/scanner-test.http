@@ -1,0 +1,31 @@
+### 1. Good Review (Pass)
+POST http://localhost:8080/api/reviews/scan
+Content-Type: application/json
+
+{
+  "reviewText": "เนื้อหาคอร์สนี้ดีมากครับ อธิบายเข้าใจง่าย มีตัวอย่างประกอบชัดเจน ช่วยให้เข้าใจเรื่อง Spring Boot ได้เร็วขึ้นเยอะเลย"
+}
+
+### 2. Spam Review (Reject)
+POST http://localhost:8080/api/reviews/scan
+Content-Type: application/json
+
+{
+  "reviewText": "รับปั๊มไลก์ เพิ่มผู้ติดตาม ราคาถูก ทักแชทเลยครับ !!! คลิกที่นี่ www.spam-link.com"
+}
+
+### 3. Profanity/High Emotion (Reject)
+POST http://localhost:8080/api/reviews/scan
+Content-Type: application/json
+
+{
+  "reviewText": "ห่วยแตกมาก!!! เสียเวลาสุดๆ ไม่แนะนำให้เรียนเลย โคตรแย่!!!"
+}
+
+### 4. Attacking Instructor Personality (Reject)
+POST http://localhost:8080/api/reviews/scan
+Content-Type: application/json
+
+{
+  "reviewText": "อาจารย์พูดจาไม่เพราะเลย น้ำเสียงดูถูกนักเรียน ไม่ชอบบุคลิกส่วนตัวของคนสอนเลยครับ"
+}
