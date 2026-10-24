@@ -1,0 +1,14 @@
+com/example/aiscanner/dto/GeminiRequest$Content.class
+com/example/aiscanner/service/GeminiScannerService.class
+com/example/aiscanner/dto/GeminiRequest$SystemInstruction.class
+com/example/aiscanner/dto/GeminiRequest$Part.class
+com/example/aiscanner/dto/ReviewRequest.class
+com/example/aiscanner/dto/GeminiResponse$Part.class
+com/example/aiscanner/controller/ReviewController.class
+com/example/aiscanner/dto/GeminiResponse$Candidate.class
+com/example/aiscanner/AiScannerApplication.class
+com/example/aiscanner/dto/GeminiResponse$Content.class
+com/example/aiscanner/dto/GeminiRequest.class
+com/example/aiscanner/dto/GeminiRequest$GenerationConfig.class
+com/example/aiscanner/dto/GeminiResponse.class
+com/example/aiscanner/dto/ReviewScanResult.class

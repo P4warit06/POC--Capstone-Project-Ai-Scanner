@@ -1,0 +1,31 @@
+### 1. Constructive, positive review (Pass)
+POST http://localhost:8080/api/reviews/scan
+Content-Type: application/json
+
+{
+  "reviewText": "วิชานี้สอนดีมากครับ เนื้อหาทันสมัยและสามารถนำไปประยุกต์ใช้ได้จริง อาจารย์ให้คำแนะนำเป็นประโยชน์และใจดีมาก"
+}
+
+### 2. Spam review selling irrelevant services (Reject)
+POST http://localhost:8080/api/reviews/scan
+Content-Type: application/json
+
+{
+  "reviewText": "ใครอยากได้เกรด A แบบไม่ต้องเรียน ทักแชทมาเลยครับ รับจ้างทำโปรเจกต์และรายงานทุกวิชา ราคาเป็นกันเอง สนใจติดต่อ @Line: xxx"
+}
+
+### 3. Profanity/High emotion (Reject)
+POST http://localhost:8080/api/reviews/scan
+Content-Type: application/json
+
+{
+  "reviewText": "ห่วยแตกที่สุด!!! เรียนไม่รู้เรื่องเลย สอนอะไรก็ไม่เข้าใจ เสียเวลาชีวิตมาก โคตรแย่!!!"
+}
+
+### 4. Complaining about instructor personality (Reject)
+POST http://localhost:8080/api/reviews/scan
+Content-Type: application/json
+
+{
+  "reviewText": "ไม่ชอบอาจารย์คนนี้เลย พูดจาไม่สุภาพและดูถูกนักเรียนตลอดเวลา บุคลิกภาพไม่เหมาะสมกับการเป็นผู้สอน"
+}
